@@ -10,7 +10,7 @@
                    <form action="" method="post">
                         <div class="card">
                             <div class="card-header">
-                                Cursos
+                                Cursosss
                             </div>
                             <div class="card-body">
                                 <div class="mb-3">
