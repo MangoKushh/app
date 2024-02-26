@@ -49,6 +49,6 @@ $listacursos=$consulta->fetchAll();
 
 //print_r($listacursos);
 
-print_r($_POST);
+//print_r($_POST);
 
 ?>
