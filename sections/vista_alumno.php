@@ -34,10 +34,14 @@
                                     value="<?php echo $apellidos_alumno;?>"/>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nombre_curso" class="form-label">Cursos del alumno</label>
+                                    <label for="nombre_curso" class="form-label">Cursos</label>
                                     <select multiple class="form-control" name="cursos[]" id="listaCursos">
-                                        <option>Seleccione una opción</option>
-                                        <option>Opcion 1</option>
+                                        <?php foreach($cursos as $curso){ ?>
+                                        <option value="<?php echo $curso['id'];?>"> 
+                                            <?php echo $curso['id']; echo ". ";
+                                            echo $curso['nombre_curso'];?>
+                                        </option> <?php } ?>
+                                        
                                         
                                     </select>
                                 </div>
@@ -59,18 +63,23 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nombre completo</th>
+                                    <th scope="col">Cursos</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($lista_alumnos as $alumno){ ?>
 
-                                
                                 <tr>
                                     <td><?php echo $alumno['id'];?></td>
                                     <td><?php  echo $alumno['apellidos'];
                                         echo ', ';
                                         echo $alumno['nombre'];?></td>
+                                    <td>
+                                        <?php foreach($alumno['cursos'] as $curso){
+                                        echo $curso['nombre_curso']; 
+                                        echo "<br>";
+                                        }?></td>
                                     <td>
                                         <form action="" method="post">
                                             <input type="hidden" name="id" id="id" value="<?php echo $alumno['id'];?>">
@@ -88,4 +97,9 @@
             </div>
         </div>
     </div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<script> new TomSelect("#listaCursos",{plugins:['remove_button']}); </script>
 </div><?php include('../template/pie.php');?>

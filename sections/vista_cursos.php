@@ -50,8 +50,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach($listacursos as $curso){ ?>
-
-                                
+ 
                                 <tr>
                                     <td><?php echo $curso['id'];?></td>
                                     <td><?php echo $curso['nombre_curso'];?></td>
