@@ -27,6 +27,7 @@
                 <a class="nav-item nav-link" href="vista_alumno.php">Alumnos</a>
                 <a class="nav-item nav-link" href="vista_cursos.php">Cursos</a>
                 <a class="nav-item nav-link" href="#">Cerrar sesión</a>
+                <a class="nav-item nav-link" href="/tetris/tetris.php">Tetris</a>
             </div>
         </nav>
         
